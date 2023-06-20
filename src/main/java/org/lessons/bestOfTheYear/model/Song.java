@@ -1,19 +1,9 @@
 package org.lessons.bestOfTheYear.model;
 
-public class Song {
+public class Song extends Media{
 
-    //ATTRIBUTI ------------------------------------------------
-    private int id;
-    private String title;
-
-    //COSTRUTTORE ------------------------------------------------
     public Song(int id, String title) {
-        this.id = id;
-        this.title = title;
+        super(id, title);
     }
-
-    //GETTERS ------------------------------------------------
-    public int getId() { return id; }
-    public String getTitle() { return title; }
 
 }

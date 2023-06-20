@@ -1,19 +1,9 @@
 package org.lessons.bestOfTheYear.model;
 
-public class Movie {
+public class Movie extends Media{
 
-    //ATTRIBUTI ------------------------------------------------
-    private int id;
-    private String title;
-
-    //COSTRUTTORE ------------------------------------------------
     public Movie(int id, String title) {
-        this.id = id;
-        this.title = title;
+        super(id, title);
     }
-
-    //GETTERS ------------------------------------------------
-    public int getId() { return id; }
-    public String getTitle() { return title; }
 
 }
