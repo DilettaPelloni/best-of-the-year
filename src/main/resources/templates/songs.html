@@ -8,7 +8,9 @@
 
   <h1>Best songs</h1>
   <ul>
-    <li th:each="song : ${songs}"> [[${song.getTitle()}]] </li>
+    <li th:each="song : ${songs}">
+      <a th:href="@{|/songs/${song.getId()}|}">[[${song.getTitle()}]]</a>
+    </li>
   </ul>
 
 </body>
