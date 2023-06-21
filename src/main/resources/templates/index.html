@@ -6,6 +6,17 @@
 </head>
 <body>
 
+  <header>
+    <ul>
+      <li>
+        <a th:href="@{/movies}">Movies</a>
+      </li>
+      <li>
+        <a th:href="@{/songs}">Songs</a>
+      </li>
+    </ul>
+  </header>
+
   <h1>
     Best of the year by
     <span th:text="${name}"></span>
