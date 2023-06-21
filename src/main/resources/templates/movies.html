@@ -8,7 +8,9 @@
 
   <h1>Best movies</h1>
   <ul>
-    <li th:each="movie : ${movies}"> [[${movie.getTitle()}]] </li>
+    <li th:each="movie : ${movies}">
+      <a th:href="@{|/movies/${movie.getId()}|}">[[${movie.getTitle()}]]</a>
+    </li>
   </ul>
 
 </body>
