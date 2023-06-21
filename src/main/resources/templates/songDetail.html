@@ -5,5 +5,20 @@
     <title> [[${song.getTitle()}]]</title>
 </head>
 <body>
+
+    <header class="container">
+        <a th:href="@{/}">Home</a>
+    </header>
+
+    <main class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col" th:object="${song}">
+                <h1 class="display-3 fw-bolder text-center text-info mb-5">
+                    [[*{getTitle()}]]
+                </h1>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

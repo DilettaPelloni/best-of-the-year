@@ -1,0 +1,15 @@
+body {
+    height: 100vh;
+}
+
+header {
+    height: 70px;
+}
+
+main {
+    height: calc(100% - 70px);
+}
+
+.list-group-item {
+    cursor:pointer;
+}

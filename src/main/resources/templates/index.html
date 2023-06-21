@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="container">
     <ul>
       <li>
         <a th:href="@{/movies}">Movies</a>
@@ -17,10 +17,28 @@
     </ul>
   </header>
 
-  <h1>
-    Best of the year by
-    <span th:text="${name}"></span>
-  </h1>
+  <main class="container d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col">
+        <h2 class="display-5 fw-medium text-center text-info">
+          Best of the year by
+        </h2>
+        <h1 class="display-3 fw-bolder text-center text-info mb-5">
+          [[${name}]]
+        </h1>
+        <div class="mx-auto w-50 mb-5">
+          <img class="img-fluid" th:src="@{/awards.png}">
+        </div>
+        <div class="p-4 border border-info text-center d-flex justify-content-center align-items-center">
+          <p class="mb-0 fs-2 fw-mediom text-dark">
+            THE BEST OF THE BEST (?)
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
 
 </body>
 </html>

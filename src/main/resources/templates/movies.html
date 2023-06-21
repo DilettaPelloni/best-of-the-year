@@ -5,16 +5,30 @@
   <title>Best of the year</title>
 </head>
 <body>
-  <header>
-        <a th:href="@{/}">Home</a>
+  <header class="container">
+    <a th:href="@{/}">Home</a>
   </header>
 
-  <h1>Best movies</h1>
-  <ul>
-    <li th:each="movie : ${movies}">
-      <a th:href="@{|/movies/${movie.getId()}|}">[[${movie.getTitle()}]]</a>
-    </li>
-  </ul>
+  <main class="container d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-3 fw-bolder text-center text-info mb-5">
+          BEST MOVIES
+        </h1>
+        <div class="mx-auto w-50 mb-5">
+          <img class="img-fluid" th:src="@{/movies.png}">
+        </div>
+        <ul class="list-group mx-auto text-center w-75">
+          <li th:each="movie : ${movies}" class="list-group-item border-info">
+            <a class="text-decoration-none text-dark" th:href="@{|/movies/${movie.getId()}|}" >
+              [[${movie.getTitle()}]]
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
 
 </body>
 </html>
