@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <th:block th:replace="fragments :: head"></th:block>
+    <th:block th:replace="~{fragments :: head}"></th:block>
     <title> [[${song.getTitle()}]]</title>
 </head>
 <body>
 
     <header class="container">
-        <a th:href="@{/}">Home</a>
+        <nav th:replace="~{fragments :: navbar('song')}"></nav>
     </header>
 
     <main class="container d-flex justify-content-center align-items-center">
