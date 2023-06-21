@@ -6,8 +6,10 @@
 </head>
 <body>
 
-<h1>Best songs</h1>
-<h4 th:text="${songs}"></h4>
+  <h1>Best songs</h1>
+  <ul>
+    <li th:each="song : ${songs}"> [[${song.getTitle()}]] </li>
+  </ul>
 
 </body>
 </html>

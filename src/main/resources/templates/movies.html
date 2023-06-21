@@ -7,7 +7,9 @@
 <body>
 
   <h1>Best movies</h1>
-  <h4 th:text="${movies}"></h4>
+  <ul>
+    <li th:each="movie : ${movies}"> [[${movie.getTitle()}]] </li>
+  </ul>
 
 </body>
 </html>
