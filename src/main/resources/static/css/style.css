@@ -9,7 +9,3 @@ header {
 main {
     height: calc(100% - 70px);
 }
-
-.list-group-item {
-    cursor:pointer;
-}
